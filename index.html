@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Healthcare Comparison Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+        #result {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    </style>
+<link type="text/css" rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+
+<h1>Healthcare Comparison Calculator</h1>
+
+<label for="income">Annual Income ($):</label>
+<input type="number" id="income" required>
+
+<label for="dependents">Number of Dependents:</label>
+<input type="number" id="dependents" required>
+
+<label for="planType">Health Insurance Plan Type:</label>
+<select id="planType" required>
+    <option value="individual">Individual</option>
+    <option value="family">Family</option>
+</select>
+
+<label for="employerContribution">Employer Contribution to Employee (%)</label>
+<select id="employerContribution" required>
+    <option value="1">100%</option>
+    <option value="0.5">50%</option>
+    <option value="0">0%</option>
+</select>
+
+<button onclick="calculateDifference()">Calculate</button>
+
+<div id="result"></div>
+
+<script src="calculator.js"></script>
+<script type="text/javascript" src="js/script.js"></script>
+</body>
+</html>
